@@ -21,7 +21,6 @@ jobs:
     machine: true
     steps:
       - checkout
-
       - run: docker run --rm -v $(pwd):/src -w /src hysnsec/retire --outputformat json --outputpath retirejs-output.json --severity high
         when: on_fail             # Even if the job fails, continue to the next stages
 
